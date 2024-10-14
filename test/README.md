@@ -1,0 +1,1 @@
+For information about writing and running tests, see [Using Your Local Install to Modify syndromica's Website and API](https://syndromica.fandom.com/wiki/Using_Your_Local_Install_to_Modify_Syndromica's_Website_and_API).

@@ -1,0 +1,14 @@
+{
+  "name": "syndromica V3 API Documentation",
+  "title": "syndromica",
+  "url": "https://syndromica.com",
+  "version": "3.0.0",
+  "sampleUrl": null,
+  "header": {
+    "title": "Introduction",
+    "filename": "apidoc/header.md"
+  },
+  "template": {
+    "withCompare": false
+  }
+}

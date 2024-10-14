@@ -1,0 +1,36 @@
+version: "3"
+services:
+
+  client:
+    build: .
+    networks:
+      - syndromica
+    environment:
+      - BASE_URL=http://server:3000
+    ports:
+        - "8080:8080"
+    command: ["npm", "run", "client:dev"]
+    depends_on:
+      - server
+
+  server:
+    build: .
+    ports:
+      - "3000:3000"
+    networks:
+      - syndromica
+    environment:
+      - NODE_DB_URI=mongodb://mongo/syndrobox
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:3.6
+    ports:
+      - "27017:27017"
+    networks:
+      - syndromica
+
+networks:
+  syndromica:
+    driver: bridge

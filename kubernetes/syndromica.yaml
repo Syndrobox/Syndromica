@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: syndromica
+  labels:
+    name: syndromica
+spec:
+  containers:
+#    - image: mongo:latest
+#      name: mongo
+#      ports:
+#        - containerPort: 27017
+#          name: mongo
+    - image: ksonney/syndrobox:latest
+      name: syndromica
+      env:
+        - name: NODE_DB_URI
+          value: mongodb://mongosvc/syndrobox
+      ports: 
+        - containerPort: 3000
+          hostPort: 3000
+          name: syndromica
